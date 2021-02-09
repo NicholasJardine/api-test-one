@@ -4,13 +4,15 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
   end
 
   def show
-  end
-
-  private
-
-  def set_restaurant
     @restaurant = Restaurant.find(params[:id])
-    authorize @restaurant  # For Pundit
+    authorize @restaurant
   end
+
+  # private
+
+  # def set_restaurant
+  #   @restaurant = Restaurant.find(params[:id])
+  #   authorize @restaurant  # For Pundit
+  # end
 
 end
