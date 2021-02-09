@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 gem 'pundit'
+gem 'simple_token_authentication'
 
 
 # Use ActiveModel has_secure_password
