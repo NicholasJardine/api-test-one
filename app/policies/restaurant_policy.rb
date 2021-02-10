@@ -16,4 +16,9 @@ class RestaurantPolicy < ApplicationPolicy
   def create?
     !user.nil?
   end
+
+  def destroy
+    update?
+    # No need to create a `destroy.json.jbuilder` view
+  end
 end
