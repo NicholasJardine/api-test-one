@@ -35,7 +35,7 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
 
   def destroy
     @restaurant.destroy
-    head :no_content
+    render json:{message: "it worked"}
   end
 
 
@@ -47,11 +47,11 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
   end
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address,)
+    params.require(:restaurant).permit(:name, :address)
 
   end
 
-    def render_error
+  def render_error
     render json: { errors: @restaurant.errors.full_messages },
       status: :unprocessable_entity
   end

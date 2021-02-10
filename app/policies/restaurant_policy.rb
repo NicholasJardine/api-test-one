@@ -18,7 +18,7 @@ class RestaurantPolicy < ApplicationPolicy
   end
 
   def destroy
-    update?
-    # No need to create a `destroy.json.jbuilder` view
+    record.user == user
   end
+
 end
